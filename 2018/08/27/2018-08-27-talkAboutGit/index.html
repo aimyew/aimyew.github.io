@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="config-outer-description">
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          Talk about Git - aimu | aim yew
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite.com/2018/08/27/2018-08-27-talkAboutGit/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">aimyew Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                        <li>
+                            <a href="/about/">about </a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://yoursite.com/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/undefined')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>Talk about Git</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by aimyew on
+                        2018-08-27
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>This is a personal note. If there are any mistakes in writing, please email me. Git is a skillfull tool that beginners must learn. Of course, SVN is also a usefull tool. The actual management requirements of various projects in the company are different, so we need master it.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><blockquote>
+<h3 id="setting-info"><a href="#setting-info" class="headerlink" title="setting info"></a>setting info</h3><ul>
+<li>$ git config –global user.name “aimu_zs”</li>
+<li>$ git config –global user.email “<a href="mailto:1422203188@qq.com" target="_blank" rel="noopener">1422203188@qq.com</a>“</li>
+<li>$ git config –unset user.name</li>
+<li>$ ssh-keygen -t rsa -C “<a href="mailto:1422203188@qq.com" target="_blank" rel="noopener">1422203188@qq.com</a>“</li>
+</ul>
+<hr>
+<h3 id="check-info"><a href="#check-info" class="headerlink" title="check info"></a>check info</h3><ul>
+<li>$ git config –system -list 或者 -l</li>
+<li>$ git config –global -l</li>
+</ul>
+<hr>
+<h3 id="Config-Level"><a href="#Config-Level" class="headerlink" title="Config Level"></a>Config Level</h3><ul>
+<li>system level<ul>
+<li>/etc/gitconfig 系统级别的配置文件，针对所有用户，对应 git config –system 选项</li>
+</ul>
+</li>
+<li>global level<ul>
+<li>${HOME}/.gitconfig 用户级别的配置文件，针对当前用户，对应 git config –global 选项</li>
+</ul>
+</li>
+<li>normal project level<ul>
+<li>.git/config 项目级别的配置文件，针对当前项目，对应 git config</li>
+</ul>
+</li>
+<li>作用强度：normal &gt; global &gt; system</li>
+</ul>
+<hr>
+<h3 id="others-optional-also-can-configure-these-in-file-D-Git-mingw64-etc-gitconfig"><a href="#others-optional-also-can-configure-these-in-file-D-Git-mingw64-etc-gitconfig" class="headerlink" title="others(optional | also can configure these in file [D:\Git\mingw64\etc\gitconfig] )"></a>others(optional | also can configure these in file [D:\Git\mingw64\etc\gitconfig] )</h3><ul>
+<li>$ git config –system core.editor=’d:\notepad++’</li>
+<li>$ git config –global color.ui auto</li>
+<li>$ git config –global color.status auto</li>
+<li>$ git config –global color.branch auto</li>
+<li>$ git config –global color.diff auto</li>
+<li>$ git config –global color.interactive auto</li>
+<li>$ git config –global alias.ii info</li>
+<li>$ git config –help   </li>
+</ul>
+<hr>
+</blockquote>
+<h1 id="单机下Git多账户"><a href="#单机下Git多账户" class="headerlink" title="单机下Git多账户"></a>单机下Git多账户</h1><blockquote>
+<p>1、touch C:\Users\wangyuan.ssh\config</p>
+</blockquote>
+<blockquote>
+<p>2、config:</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># Default github user(xx@mail.com)</span><br><span class="line">Host github.com</span><br><span class="line">  HostName github.com</span><br><span class="line">  IdentityFile C:/Users/wangyuan/.ssh/id_rsa_github</span><br><span class="line">  User userNameFoo</span><br><span class="line">  PreferredAuthentications publickey</span><br><span class="line">  </span><br><span class="line"># Default github user(xx@mail.com)</span><br><span class="line">Host github.com</span><br><span class="line">  HostName git.oschina.net</span><br><span class="line">  IdentityFile C:/Users/wangyuan/.ssh/id_rsa_osa</span><br><span class="line">  User userNameBar</span><br><span class="line">  PreferredAuthentications publickey</span><br><span class="line">  </span><br><span class="line"># PreferredAuthentications可设为publickey,password publickey,keyboard-interactive等</span><br></pre></td></tr></table></figure>
+
+<h1 id="常用CMD"><a href="#常用CMD" class="headerlink" title="常用CMD"></a>常用CMD</h1><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">烂大街，必须会</span><br><span class="line">  $ git add .</span><br><span class="line">  $ git commit -m <span class="string">"give some word to explain this operation"</span></span><br><span class="line">  $ git push origin master</span><br><span class="line">  </span><br><span class="line">  或者</span><br><span class="line">  </span><br><span class="line">  $ git commit -am <span class="string">"give some word to explain this operation"</span></span><br><span class="line">  $ git push origin master</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b dev 新建一个本地分支 dev</span><br><span class="line">$ git push -u origin dev 创建远端分支 dev</span><br><span class="line">$ git commit -am <span class="string">"origin-dev"</span> 操作信息 commit</span><br><span class="line">$ git push origin dev 把本地 dev 分支推到 origin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ git branch --set-upstream branch-name origin/branch-name 如果需要，则建立本地分支与远端分支的关联</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status 查看当前目录的文件状态</span><br><span class="line">  workingDirectory (untracked)</span><br><span class="line">  stagingStatus (unmodified modified)</span><br><span class="line">  gitRepos (staged)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout 切分支和撤销更改</span><br><span class="line">  $ git checkout -- file 撤销工作区对 file 的修改</span><br><span class="line">  $ git checkout . 把当前工作区中没有 add/commit 的所有文件恢复至上一次 add/commit 时的状态</span><br><span class="line">  $ git checkout dev 切换到本地 dev 分支</span><br><span class="line">  $ git checkout -b dev 创建并且换到本地 dev 分支</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git branch 查看当前所有分支，并且对当前分支标记 ⁎ 号</span><br><span class="line">  $ git branch dev 创建本地 dev 分支</span><br><span class="line">  $ git checkout -b dev 创建并切换到本地 dev 分支</span><br><span class="line">  $ git branch -d dev 删除本地 dev 分支</span><br><span class="line">  $ git branch -D feature 若从 dev 来的新功能分支 feature 还没有 merge 进 dev 就需要被删除，则使用 -D 来执行</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git remote 远端分支</span><br><span class="line">  $ git remote 列出已存在的分支</span><br><span class="line">  $ git remote --verbose 或者 -v 查看当前</span><br><span class="line">  $ git remote add origin <span class="symbol">https:</span>/<span class="regexp">/github.com/</span>AimuZsGitHub/tryGit.git 把当前 local master 推到 origin （这句话实际在说：local master branch add a remote branch named origin <span class="keyword">and</span> urld https...）</span><br><span class="line">  $ git remote add origin git@github.<span class="symbol">com:</span>AimuZsGitHub/tryGit.git 不需要 authorization</span><br><span class="line">$ git remote get-url origin 查看当期远端叫作 origin 的地址</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git merge 合并</span><br><span class="line">  $ git merge dev 将 dev 的开发产品合并到当前分支</span><br><span class="line">  $ git merge --no-ff -m <span class="string">"mergeBranchWithACommit"</span> dev 用这种方式合并，则会有一次 commitId （但是自己测试中，直接 git merge dev 也是有 commitId 的，各位大能，如有阅读，敬请指教 ！ ）</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch <span class="meta">&gt;&gt;&gt;</span></span><br><span class="line">  $ git fetch <span class="meta">&gt;&gt;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rebase <span class="meta">&gt;&gt;&gt;</span></span><br><span class="line">  $ git rebase <span class="meta">&gt;&gt;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull 从远端拉内容到本地</span><br><span class="line">  $ git pull origin master 从远端拉内容</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git stash 储存当前工作现场状态以便切换到其他分支工作</span><br><span class="line">  $ git stash list 查看所有被储存的工作现场</span><br><span class="line">  </span><br><span class="line">  $ git stash list 查看所有</span><br><span class="line">  $ git stash apply stash@&#123;<span class="number">0</span>&#125; 恢复指定stash</span><br><span class="line">  $ git stash drop stash@&#123;<span class="number">0</span>&#125; 删除工作状态</span><br><span class="line">  </span><br><span class="line">  或者</span><br><span class="line">  </span><br><span class="line">  $ git stash pop 恢复到上一次 stash 并删除该 stash</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> git log 展示 commit log</span><br><span class="line">$ git log -<span class="number">1</span> 查看最后一次 log 信息</span><br><span class="line">   $ git log --graph 查看分支合并图</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> git tag 打标签（标签建立在 commitId 之上）</span><br><span class="line">   $ git tag 查看本地所有的标签</span><br><span class="line">$ git show v<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>-release 查看 <span class="number">0</span> 号标签信息</span><br><span class="line">$ git tag v<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>-release 为当前分支的内容打 <span class="number">1</span> 号标签</span><br><span class="line">$ git tag v<span class="number">0</span>.<span class="number">0</span>.<span class="number">2</span>-release commitID 为某次 commitID 打 <span class="number">2</span> 号标签</span><br><span class="line">$ git tag -a v<span class="number">0</span>.<span class="number">0</span>.<span class="number">3</span>-release -m <span class="string">"explain to this tag"</span> commitID 创建说明性标签 -a指定标签名是 <span class="number">3</span> 号标签，-m指定说明文字</span><br><span class="line">$ git tag -d v<span class="number">0</span>.<span class="number">0</span>.<span class="number">4</span>-release 删除 <span class="number">4</span> 号标签</span><br><span class="line">$ git push origin v<span class="number">0</span>.<span class="number">0</span>.<span class="number">5</span>-release 上传 <span class="number">5</span> 号标签到远端</span><br><span class="line">$ git push origin <span class="symbol">:refs/tags/v0</span>.<span class="number">0</span>.<span class="number">6</span>-release 删除远端 <span class="number">6</span> 号标签，</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2019/09/18/2019-09-18-hello-world/" data-toggle="tooltip" data-placement="top" title="Hello World">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
+                    
+                        <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+					Copyright &copy; aimyew Blog 2019<br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Ported by <a href="https://github.com/aimyew/">aimyew</a> 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=aimyew&repo=aimyew.github.io&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="http://yoursite.com/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
